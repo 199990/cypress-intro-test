@@ -1,1 +1,74 @@
 THIS IS AN EXAMPLE OF A BUG REPORT
+
+
+1.) Switch to the Czech language
+Test scenario:
+  Step #1:       Load to page 'https://sfx.demo.magexo.cloud’
+  Step #2:       In the top menu, there is a language where the default value is "English".
+                 Change the value to "Czech” 
+Expected result: The language was changed from English to Czech on the entire page.
+
+Current result:  The language from "English" to "Czech" was not changed.
+
+
+2.) The map in the shopping cart is not displayed in its entirety
+Test scenario:
+  Prerequisite: 
+    - there is a product in the shopping cart
+         Step #1:    Select "In-Store delivery”
+         Step #2:    Click on "Select on a map”.
+
+ Expected result:    The map was displayed in full screen.
+
+ Current result:     The map isn’t visible in its entirety.
+
+
+3.) After adding the product to the shopping cart, an error is displayed
+
+Test scenario:
+  Step #1:            Load to page 'https://sfx.demo.magexo.cloud’
+  Step #2:            Scroll to the "Top trending products" section.
+  Step #3:            Click on the first product. (DNP DS820 | professional photo printer)
+  Step #4:            Check if the product is in stock.
+  Step #5:            In the item number of pieces, enter "0”.
+  Expected result:    The value was not overwritten.
+                      The number of pieces is equal to the value “1"
+  Step #6:            Click on the "+” icon.
+  Expected result:    The value "1" (pcs) was changed to "2" (pcs).
+  Step #7:            Click on the button "Add to cart”.
+  Expected result:    The product has been added to the cart.
+ 
+ Current result:      The following error was displayed. ....
+
+4.) There is a missing image on the product “HP CE732A printer kit Maintenance kit”
+Test scenario:
+Step #1:              Load to page 'https://sfx.demo.magexo.cloud’
+Step #2:              In the search field, enter the first characters of any product and click on the "magnifying glass” icon.
+Expected result:      Products matching the entered value were displayed.
+
+Current result:       The product “HP CE732A printer kit Maintenance kit” is missing an image
+
+5.) When paging, loading the page of the following products, the same products as on the previous page are displayed
+Bestway 62056 electric air pump
+Step #1:              Load to page 'https://sfx.demo.magexo.cloud’
+Step #2:              In the search field, enter 'Bestway 62056 electric air pump' and click on the "magnifying glass” icon.
+Expected result:      Products matching the entered value were displayed.
+Step #3:              Scroll to the last product.
+Step #4:              Click on the upcoming number in the pagination section
+Step #5:              Scroll to the last product.
+Step #6:              Click the "Next” button.
+Expected result:      We are on the following page, where other products that fall under the given subcategory are displayed.
+
+Current result: On each page, the same products as on the first are displayed.
+
+
+6.) The name of the searched products = title
+Test scenario:
+Step #1:              Load to page 'https://sfx.demo.magexo.cloud’
+Step #2:              In the search field, enter the first characters of any product and click on the "magnifying glass” icon.
+Expected result:      Products matching the entered value were displayed. 
+                      In the section for categories, there is the name of the category / subcategory under which the product belongs.
+
+Current result:       name = title
+
+	

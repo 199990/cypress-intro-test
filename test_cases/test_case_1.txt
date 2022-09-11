@@ -1,2 +1,71 @@
 THIS IS AN EXAMPLE OF A TEST CASE
 
+Context: Newsletter
+
+Step #1:                Load to page 'https://sfx.demo.magexo.cloud’
+Expected result:        The page has been loaded.
+                        We are on the shop page ’Storefront X’.
+
+Step #2:                Enter a valid email in the "Newsletter" item and click on "Sign Up".
+Expected result:        The email was filled in and sent.
+
+Step #3:                Check if the email has been sent.
+Expected result:        The email was sent to the correct email address.
+
+Context: Shopping cart
+  it('Add an item to shopping cart')
+
+    Step #1:            Load to page 'https://sfx.demo.magexo.cloud’
+    Expected result:    The page has been loaded.
+                        We are on the shop page ’Storefront X’.  
+
+    Step #2:            Scroll to the "Top trending products" section.
+    Expected result:    The page has been scrolled.
+
+    Step #3:            Click on the second product.
+    Expected result:    We are on the product detail.
+
+    Step #4:            Click on the button "Add to cart”.
+    Expected result:    The product has been added to the cart. 
+
+  it('Remove item from shopping cart')
+    Prerequisite: 
+       There is a product in the shopping cart  
+
+    Step #1:            Click on the "-" button.
+    Expected result:    A confirmation was displayed if we want to remove the product from the shopping cart.
+
+    Step #2:            Click on the "Remove" button.
+    Expected result:    The product has been removed from the shopping cart.
+                        The shopping cart is empty. 
+
+  it('Place order')                     
+    Prerequisite: 
+       There is a product in the shopping cart  
+
+    Step #1:            Select “Flat rate”
+    Expected result:    The payment options are displayed.     
+
+    Step #2:            Click on any payment method.
+    Expected result:    The form for the "Contact information" section has been displayed.
+
+    Step #3:            Check in the "Order summary” section.
+    Expeceted result:   The product selected by us is displayed.
+                        Subtotal, corresponds to the price.
+                        Shipping, corresponds to the shipping method specified by us.
+                        VAT 21% is calculated correctly.
+                        Total, corresponds to all values.   
+
+
+    Context: Search bar 
+      it('Search for an item and open it')
+
+    Step #1:            Load to page 'https://sfx.demo.magexo.cloud’
+    Expected result:    The page has been loaded.
+                        We are on the shop page ’Storefront X’.
+
+    Step #2:            In the search field, enter any product.
+    Expected result:    Products that meet the specified value are displayed below the search field. 
+
+    Step #3:            Click on the first product from the list.
+    Expeceted result:   We are on the product detail.      
